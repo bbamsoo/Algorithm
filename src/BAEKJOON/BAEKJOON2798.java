@@ -1,8 +1,8 @@
-package BACKJOON;
+package BAEKJOON;
 
 import java.util.Scanner;
 
-public class BACKJOON2798 {
+public class BAEKJOON2798 {
     static int search(int[] card, int count, int sum){
         int result = 0;
         int temp = 0;
