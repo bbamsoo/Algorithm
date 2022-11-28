@@ -1,20 +1,23 @@
 package BAEKJOON.Sorting;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.io.*;
+import java.util.Arrays;
 
 public class BAEKJOON2750 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int input = sc.nextInt();
-        ArrayList<Integer> arr = new ArrayList<>();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int n = Integer.parseInt(br.readLine());
+        int[] arr = new int[n];
 
-        for (int i=0;i<input;i++){
-            arr.add(sc.nextInt());
+        for (int i=0;i<n;i++){
+            arr[i] = Integer.parseInt(br.readLine());
         }
-        Collections.sort(arr);
+        Arrays.sort(arr);
         for (int i:arr)
-            System.out.println(i);
+            bw.write(i+"\n");
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
