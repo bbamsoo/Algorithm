@@ -1,24 +1,28 @@
 package BAEKJOON.Sorting;
 
+import java.io.*;
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class BAEKJOON11399 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int N=sc.nextInt();
-        int[]wait=new int[N];
-
-        for(int i=0;i<N;i++)
-            wait[i]=sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int n = Integer.parseInt(br.readLine());
+        int[]wait=new int[n];
+        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+        for(int i=0;i<n;i++)
+            wait[i] = Integer.parseInt(st.nextToken());
         Arrays.sort(wait);
-        for(int i=1;i<N;i++)
+        for(int i=1;i<n;i++)
             wait[i]+=wait[i-1];
 
         int sum=0;
         for (int num:wait)
             sum+=num;
-        System.out.println(sum);
+        bw.write(sum+"");
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
-
