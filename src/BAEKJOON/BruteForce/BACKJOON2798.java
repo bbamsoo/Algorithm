@@ -1,6 +1,8 @@
 package BAEKJOON.BruteForce;
 
+import java.io.*;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class BACKJOON2798 {
     static int search(int[] card, int count, int sum){
@@ -21,19 +23,25 @@ public class BACKJOON2798 {
         return result;
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int count = sc.nextInt();
-        int sum = sc.nextInt();
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
+        int count = Integer.parseInt(st.nextToken());
+        int sum = Integer.parseInt(st.nextToken());
 
         int []card= new int[count];
 
+        st = new StringTokenizer(br.readLine(), " ");
         for(int i=0;i<card.length;i++){
-            card[i] = sc.nextInt();
+            card[i] = Integer.parseInt(st.nextToken());
         }
-        System.out.println(search(card,count,sum));
-
+        bw.write(search(card,count,sum)+"");
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
 
