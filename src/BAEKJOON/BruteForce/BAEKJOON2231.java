@@ -1,16 +1,18 @@
 package BAEKJOON.BruteForce;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class BAEKJOON2231 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int input = sc.nextInt();
+        int n = Integer.parseInt(br.readLine());
         int result = 0;
 
-        for(int i = 0; i < input; i++) {
+        for(int i = 0; i < n; i++) {
             int num = i;
             int sum = 0;
 
@@ -18,7 +20,7 @@ public class BAEKJOON2231 {
                 sum += num % 10;
                 num /= 10;
             }
-            if(sum + i == input) {
+            if(sum + i == n) {
                 result = i;
                 break;
             }
