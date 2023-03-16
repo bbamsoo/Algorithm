@@ -40,6 +40,7 @@ public class BAEKJOON9372 {
         Queue<Integer> queue = new LinkedList<>();
         queue.add(1);
         visit[1] = true;
+
         while (!queue.isEmpty()){
             ans++;
             int temp = queue.poll();
