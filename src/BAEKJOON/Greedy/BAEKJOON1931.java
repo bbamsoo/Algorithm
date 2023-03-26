@@ -1,18 +1,21 @@
 package BAEKJOON.Greedy;
 
+import java.io.*;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class BAEKJOON1931 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int N = Integer.parseInt(br.readLine());
         int[][] time = new int[N][2];
 
         for(int i=0;i<N;i++){
-            time[i][0]=sc.nextInt();
-            time[i][1]=sc.nextInt();
+            StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+            time[i][0] = Integer.parseInt(st.nextToken());
+            time[i][1] = Integer.parseInt(st.nextToken());
         }
         Arrays.sort(time, new Comparator<int[]>() {
             @Override
@@ -31,7 +34,10 @@ public class BAEKJOON1931 {
                 count++;
             }
         }
-        System.out.println(count);
+        bw.write(count+"");
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
 
