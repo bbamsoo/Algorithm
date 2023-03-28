@@ -1,12 +1,13 @@
 package BAEKJOON.Greedy;
 
-import java.util.Scanner;
+import java.io.*;
 import java.util.StringTokenizer;
 
 public class BAEKJOON1541 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String input=sc.nextLine();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String input= br.readLine();
         int sum=Integer.MAX_VALUE;
         StringTokenizer sub=new StringTokenizer(input,"-");
         while (sub.hasMoreElements()){
@@ -19,6 +20,9 @@ public class BAEKJOON1541 {
                 sum=temp;
             else sum-=temp;
         }
-        System.out.println(sum);
+        bw.write(sum+"");
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
