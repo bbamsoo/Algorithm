@@ -1,6 +1,6 @@
 package BAEKJOON.BruteForce;
 
-import java.util.Scanner;
+import java.io.*;
 
 public class BEAKJOON1436 {
     public static int shom(int n) {
@@ -14,9 +14,13 @@ public class BEAKJOON1436 {
         }
         return i;
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        System.out.println(shom(n));
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int n = Integer.parseInt(br.readLine());
+        bw.write(shom(n)+"");
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
