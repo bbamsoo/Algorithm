@@ -4,7 +4,7 @@ import java.io.*;
 
 public class BAEKJOON1003 {
     static Integer[][] dp = new Integer[41][2];
-수
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
