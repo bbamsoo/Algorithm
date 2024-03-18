@@ -13,7 +13,7 @@ public class BAEKJOON1463 {
             if(i%2==0) dp[i]=Math.min(dp[i],dp[i/2]+1);
             if(i%3==0) dp[i]=Math.min(dp[i],dp[i/3]+1);
         }
-        bw.write(dp[x]);
+        bw.write(dp[x]+"");
         bw.flush();
         bw.close();
         br.close();
