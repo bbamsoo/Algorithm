@@ -1,4 +1,4 @@
-package Programmers.DfsBfs;
+package Programmers.Graph;
 
 import java.util.LinkedList;
 import java.util.Queue;
