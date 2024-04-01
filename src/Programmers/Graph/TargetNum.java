@@ -1,4 +1,4 @@
-package Programmers.DfsBfs;
+package Programmers.Graph;
 
 public class TargetNum {
     int answer = 0;
